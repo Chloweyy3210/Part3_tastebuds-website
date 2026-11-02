@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF5EA">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Taste Buds">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>Enquiries | Taste Buds Catering</title>
+  <meta name="description" content="Send an event enquiry to find local caterers and food trucks, or apply to become a Taste Buds Catering vendor.">
+  <link rel="icon" href="images/Pink and Brown Minimalist Pastry Chef Logo (1).png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css_assets/myfirststyles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="images/Pink and Brown Minimalist Pastry Chef Logo (1).png" alt="Taste Buds Catering logo">
+        <span class="brand-word">Taste Buds<small>Catering &amp; Food Trucks</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="enquiries.html" aria-current="page">Enquiries</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="breadcrumb">Enquiries</p>
+        <h1>Tell us what you need. We'll do the matching.</h1>
+        <p>Planning an event, or running a food business that wants more bookings? Pick the form below — it takes about two minutes.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="tabs" role="tablist" aria-label="Enquiry type">
+          <button class="tab-btn" data-tab="event" role="tab" aria-selected="true">Plan an event</button>
+          <button class="tab-btn" data-tab="vendor" role="tab" aria-selected="false">Become a vendor</button>
+        </div>
+
+        <!-- Event enquiry -->
+        <div id="event" class="tab-panel active">
+          <div class="two-col">
+            <div class="form-card">
+              <h2>Plan an event</h2>
+              <p>Tell us about your event and we'll help connect you with vendors who fit your date, budget and guest count.</p>
+              <form data-form="event enquiry" novalidate>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="ev-name">Full name</label>
+                    <input type="text" id="ev-name" name="name" required>
+                  </div>
+                  <div class="field">
+                    <label for="ev-email">Email address</label>
+                    <input type="email" id="ev-email" name="email" required autocomplete="email" autocapitalize="none">
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="ev-phone">Phone number</label>
+                    <input type="tel" id="ev-phone" name="phone" required>
+                  </div>
+                  <div class="field">
+                    <label for="ev-date">Event date</label>
+                    <input type="date" id="ev-date" name="date" required>
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="ev-type">Event type</label>
+                    <select id="ev-type" name="event_type" required>
+                      <option value="">Select an event type</option>
+                      <option>Wedding</option>
+                      <option>Corporate function</option>
+                      <option>Birthday party</option>
+                      <option>Community market</option>
+                      <option>Private dinner</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="ev-guests">Estimated guest count</label>
+                    <input type="number" id="ev-guests" name="guests" min="1" required>
+                  </div>
+                </div>
+                <fieldset class="field">
+                  <label>Budget range per person</label>
+                  <div class="radio-row">
+                    <label><input type="radio" name="budget" value="under-100" required> Under R100</label>
+                    <label><input type="radio" name="budget" value="100-250"> R100 – R250</label>
+                    <label><input type="radio" name="budget" value="250-plus"> R250+</label>
+                  </div>
+                </fieldset>
+                <div class="field">
+                  <label for="ev-message">Tell us more</label>
+                  <textarea id="ev-message" name="message" placeholder="Cuisine preferences, dietary requirements, venue, anything else we should know..."></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Send enquiry</button>
+                <div class="form-msg" role="status"></div>
+              </form>
+            </div>
+            <div>
+              <p class="eyebrow">What happens next</p>
+              <h3>We match you with 2–3 vendors</h3>
+              <p>A host support coordinator reviews your enquiry and shares it with vendors who match your event type, area and budget. You'll hear back from us — and directly from interested vendors — within one business day.</p>
+              <h3>No obligation</h3>
+              <p>Getting a quote never commits you to booking. Compare before deciding.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vendor enquiry -->
+        <div id="vendor" class="tab-panel">
+          <div class="two-col">
+            <div class="form-card">
+              <h2>Become a vendor</h2>
+              <p>Tell us about your food business and we'll help you set up a profile that gets you found and booked.</p>
+              <form data-form="vendor application" novalidate>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="v-business">Business name</label>
+                    <input type="text" id="v-business" name="business_name" required>
+                  </div>
+                  <div class="field">
+                    <label for="v-name">Contact name</label>
+                    <input type="text" id="v-name" name="name" required>
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="v-email">Email address</label>
+                    <input type="email" id="v-email" name="email" required autocomplete="email" autocapitalize="none">
+                  </div>
+                  <div class="field">
+                    <label for="v-phone">Phone number</label>
+                    <input type="tel" id="v-phone" name="phone" required>
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="v-category">Category</label>
+                    <select id="v-category" name="category" required>
+                      <option value="">Select a category</option>
+                      <option>Food truck</option>
+                      <option>Full-service catering</option>
+                      <option>Desserts &amp; bakery</option>
+                      <option>Beverage bar</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="v-city">City</label>
+                    <input type="text" id="v-city" name="city" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="v-message">Tell us about your food</label>
+                  <textarea id="v-message" name="message" placeholder="Cuisine, typical menu, usual event sizes, anything else we should know..."></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Apply as a vendor</button>
+                <div class="form-msg" role="status"></div>
+              </form>
+            </div>
+            <div>
+              <p class="eyebrow">What happens next</p>
+              <h3>We review within two business days</h3>
+              <p>Our vendor relations team checks your details and reaches out to help set up your profile — menu, photos, pricing and availability.</p>
+              <h3>Then you start getting found</h3>
+              <p>Once live, hosts searching by cuisine, area and event type can find and message you directly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img src="images/Pink and Brown Minimalist Pastry Chef Logo (1).png" alt="Taste Buds Catering logo">
+            <span class="brand-word">Taste Buds</span>
+          </a>
+          <p>The local marketplace connecting hungry hosts with independent caterers and food trucks.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul>
+            <li><a href="enquiries.html">Send an enquiry</a></li>
+            <li><a href="contact.html">Contact &amp; locations</a></li>
+            <li><a href="enquiries.html#vendor">Join as a vendor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow along</h4>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span class="current-year">2026</span> Taste Buds Catering. All rights reserved.</span>
+        <span>Johannesburg · Cape Town</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js_assets/script.js"></script>
+</body>
+</html>
